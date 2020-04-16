@@ -47,18 +47,18 @@ function purchaseItems(ans) {
         for (let j = 0; j < ans.length; j++){
             if (ans[j].item_id == output.choice) {
                 var possible = true;
-                let user_item = output.choice;
-                let uitem_id = j;
+                var user_item = output.choice;
+                var uitem_id = j;
                 inquirer.prompt({
                     name: "quant",
                     type: "input",
                     message: "Enter quantity of units desired: "
                 }).then(function (q){
                     if ((ans[uitem_id].stock_quantity - q.quant) >= 0) {
-                        connect.query("update products set stock_quantity='" + (ans[uitem_id].stock_quantity - q.quant) + "'where item_id='" + user_item + "'", function (res){
-                            console.log("Nom nom! You have purchased " + output.quant + " items with id: " + ans[uitem_id].product_name + ". Remaining stock: " + ans[uitem_id].stock_quantity);
+                        connect.query("update products set stock_quantity='" + (ans[uitem_id].stock_quantity - q.quant) + "'where item_id='" + user_item + "'", function (){
+                            console.log("Nom nom! You have purchased " + q.quant + " items with id: " + ans[uitem_id].product_name + ". Cost: $" + (ans[uitem_id].price*q.quant) + ". Updating...");
                             // looping after set time.
-                            setTimeout(display, 20000);
+                            setTimeout(display, 10000);
                         })
                     }
                     else {
