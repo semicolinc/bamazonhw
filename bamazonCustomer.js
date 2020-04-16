@@ -34,6 +34,7 @@ var display = function() {
     })
 }
 
+//created qualifiers to define parameters for orders
 function purchaseItems(ans) {
     inquirer.prompt([
         {
@@ -67,6 +68,7 @@ function purchaseItems(ans) {
                 })
             }
         }
+        //if no id matches one in the existing database
         if (possible == false) {
             console.log("ID number does not exist.")
             purchaseItems(ans);
