@@ -13,18 +13,18 @@ create table products(
 );
 
 insert into products (product_name, department_name, price, stock_quantity)
-values ("fish and chips", "western food", 10, 50)
-		,("steak", "western food", 25, 15)
+values ("fish and chips", "western food", 10, 100)
+		,("steak", "western food", 25, 70)
         ,("egg fried rice", "asian food", 1, 100)
-        ,("fried liver", "asian food", 5, 10)
-        ,("honey glazed duck", "western food", 20, 30)
-        ,("hand-roll sushi", "asian food", 5, 50)
-        ,("spam musubi", "asian food", 3, 55)
-        ,("roasted oolong ice-cream", "asian food", 7, 40)
-        ,("thai pineapple red curry", "asian food", 15, 30)
-        ,("beef wellington", "western food", 25, 5)
-        ,("scallop ceviche", "western food", 15, 40)
-        ,("golden truffle pizza", "western food", 100, 5)
-        ,("aged shark fin soup", "asian food", 150, 5);
+        ,("fried liver", "asian food", 5, 140)
+        ,("honey glazed duck", "western food", 20, 130)
+        ,("hand-roll sushi", "asian food", 5, 150)
+        ,("spam musubi", "asian food", 3, 155)
+        ,("roasted oolong ice-cream", "asian food", 7, 140)
+        ,("thai pineapple red curry", "asian food", 15, 130)
+        ,("beef wellington", "western food", 25, 105)
+        ,("scallop ceviche", "western food", 15, 140)
+        ,("golden truffle pizza", "western food", 100, 55)
+        ,("aged shark fin soup", "asian food", 150, 65);
         
 select * from products;
